@@ -41,25 +41,20 @@
 	function scrollToSection() {
 		sections[activeIndex]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	}
+
+	function setActive(idx: number, count: number) {
+		activeIndex = idx;
+		scrollCount = count;
+	}
 </script>
 
-<div class="about" id="about" bind:this={parentRef} on:wheel|passive={false} on:wheel={handleWheel}>
+<div class="about" id="about" bind:this={parentRef} on:wheel={handleWheel}>
 	<div class="left">
-		<button
-			on:click={() => {
-				activeIndex = 0;
-				scrollCount = 0;
-			}}
-			class="indicator"
-			class:active={activeIndex === 0}>Tentang OmahTI</button
+		<button on:click={() => setActive(0, 0)} class="indicator" class:active={activeIndex === 0}
+			>Tentang OmahTI</button
 		>
-		<button
-			on:click={() => {
-				activeIndex = 1;
-				scrollCount = 500;
-			}}
-			class="indicator"
-			class:active={activeIndex === 1}>Mengapa Memilih OmahTI?</button
+		<button on:click={() => setActive(1, 500)} class="indicator" class:active={activeIndex === 1}
+			>Mengapa Memilih OmahTI?</button
 		>
 	</div>
 
@@ -103,7 +98,7 @@
 	}
 
 	.indicator {
-		@apply py-1.25 mx-auto w-fit rounded px-4 text-base uppercase text-gray-500 transition hover:text-gray-200 md:px-8 md:py-3 md:text-lg lg:text-xl xl:text-2xl;
+		@apply py-1.25 mx-auto w-fit rounded px-4 text-base font-bold uppercase text-gray-500 transition hover:cursor-pointer hover:text-gray-200 md:px-8 md:py-3 md:text-lg lg:text-xl xl:text-2xl;
 	}
 
 	.active {
@@ -131,6 +126,6 @@
 	}
 
 	.text {
-		@apply flex items-center text-base lg:text-lg xl:text-xl;
+		@apply flex items-center text-center text-base md:text-left lg:text-lg xl:text-xl;
 	}
 </style>

@@ -19,7 +19,7 @@ html {
 }
 
 body {
-	height: 200vh;
+	height: 100vh;
 	background: var(--background);
 	color: var(--foreground);
 	@apply flex flex-col antialiased;

@@ -6,7 +6,7 @@
 	@reference "tailwindcss";
 
 	.divider-container {
-		@apply mx-8 2xl:mx-24;
+		@apply mx-8 mt-24 2xl:mx-24;
 	}
 
 	.divider {
