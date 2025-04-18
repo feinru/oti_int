@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+
+html {
+	scroll-behavior: smooth;
+}
+
+:root {
+	--background: #0f0f0f;
+	--foreground: #ffffff;
+}
+
+@theme inline {
+	--color-*: initial;
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-orange: #f0861a;
+	--color-white: #ffffff;
+	--font-sans: var(--montserrat);
+}
+
+body {
+	height: 200vh;
+	background: var(--background);
+	color: var(--foreground);
+	@apply flex flex-col antialiased;
+}
+
+.feint-root {
+	@apply contents;
+}
+
+.feint-announcer {
+	@apply absolute top-0 left-0 h-px w-px overflow-hidden whitespace-nowrap [clip-path:inset(50%)] [clip:rect(0,0,0,0)];
+}
