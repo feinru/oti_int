@@ -66,12 +66,23 @@
 		};
 	});
 
-	let { children } = $props();
+	import { fly } from 'svelte/transition';
+	import { cubicIn, cubicOut } from 'svelte/easing';
+	import type { LayoutProps } from './$types';
+
+	let { data, children }: LayoutProps = $props();
 </script>
 
 <Navbar />
 <div class="cont">
-	{@render children()}
+	{#key data.pathname}
+		<div
+			in:fly={{ easing: cubicOut, y: 10, duration: 300, delay: 400 }}
+			out:fly={{ easing: cubicIn, y: -10, duration: 300 }}
+		>
+			{@render children()}
+		</div>
+	{/key}
 </div>
 <Footer />
 

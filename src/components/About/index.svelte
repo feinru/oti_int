@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { cubicIn, cubicOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 
 	let activeIndex = 0;
@@ -70,14 +71,19 @@
 			<div
 				bind:this={aboutRef}
 				class="text"
-				in:fade={{ duration: 500 }}
-				out:fade={{ duration: 300 }}
+				in:fade={{ easing: cubicOut, duration: 300, delay: 400 }}
+				out:fade={{ easing: cubicIn, duration: 300 }}
 			>
 				Organisasi IT di Universitas Gadjah Mada yang berkomitmen dalam pengembangan proyek, aktif
 				dalam kompetisi, dan berdedikasi untuk berbagi pengetahuan melalui kegiatan pengajaran.
 			</div>
 		{:else if activeIndex === 1}
-			<div bind:this={whyRef} class="text" in:fade={{ duration: 500 }} out:fade={{ duration: 300 }}>
+			<div
+				bind:this={whyRef}
+				class="text"
+				in:fade={{ easing: cubicOut, duration: 300, delay: 400 }}
+				out:fade={{ easing: cubicIn, duration: 300 }}
+			>
 				OmahTI merupakan organisasi yang mendorong pengembangan keterampilan teknis, riset, dan soft
 				skill, khususnya di bidang IT, sekaligus membuka ruang kolaborasi baik di dalam maupun di
 				luar kampus untuk memperluas pengalaman.
@@ -90,7 +96,7 @@
 	@reference "tailwindcss";
 
 	.about {
-		@apply flex flex-col items-center px-4 py-32 md:h-screen md:flex-row md:justify-between lg:px-8 lg:py-32 2xl:px-16;
+		@apply mt-32 flex flex-col items-center px-4 md:h-screen md:flex-row md:justify-between lg:mt-32 lg:px-8 2xl:px-16;
 	}
 
 	.left {

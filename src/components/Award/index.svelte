@@ -22,7 +22,7 @@
 	@reference "tailwindcss";
 
 	.award {
-		@apply relative px-4 py-16 pt-8 lg:py-32 lg:pl-8 lg:pr-0 2xl:pl-16 2xl:pr-0;
+		@apply relative px-4 pb-16 pt-32 lg:py-32 lg:pl-8 lg:pr-0 2xl:pl-16 2xl:pr-0;
 	}
 
 	.title {

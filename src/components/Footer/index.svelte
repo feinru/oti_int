@@ -3,11 +3,8 @@
 	import Brand from './Brand.svelte';
 	import Copyright from './Copyright.svelte';
 	import Divider from './Divider.svelte';
-	import Interested from './Interested.svelte';
 	import Links from './Links.svelte';
 </script>
-
-<!-- <Interested /> -->
 
 <Divider />
 
