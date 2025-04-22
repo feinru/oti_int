@@ -58,7 +58,7 @@
 						<span class="price">{item.price}</span>
 						<span class="price-sub">/proyek</span>
 					</div>
-					<ul class="desc">
+					<ul class="items">
 						{#each item.benefits as benefit}
 							<li class="item">
 								<svg
@@ -106,7 +106,7 @@
 	}
 
 	.desc {
-		@apply mb-5 font-light text-gray-400 sm:text-xl;
+		@apply mb-8 text-center text-base text-gray-300 opacity-90;
 	}
 
 	.card {
@@ -137,12 +137,12 @@
 		@apply text-gray-400;
 	}
 
-	.desc {
-		@apply mb-8 space-y-4 text-center text-sm text-white opacity-90;
+	.items {
+		@apply mb-8 space-y-4 text-center text-sm opacity-90;
 	}
 
 	.item {
-		@apply flex justify-center space-x-3;
+		@apply flex items-center justify-center space-x-3;
 	}
 
 	.icon {

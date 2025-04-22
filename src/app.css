@@ -24,6 +24,10 @@ body {
 	@apply flex min-h-screen flex-col antialiased;
 }
 
+button {
+	@apply cursor-pointer;
+}
+
 .feint-root {
 	@apply contents;
 }

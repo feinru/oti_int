@@ -6,7 +6,7 @@
 		Memberdayakan Organisasi dan Bisnis dengan Solusi Berbasis TI, Kompetisi, dan Pembelajaran
 	</p>
 	<div class="group">
-		<a href="#about" class="btn">Transform Your Bussiness with Us</a>
+		<a href="/#about" class="btn">Get Started</a>
 	</div>
 </div>
 

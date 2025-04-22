@@ -1,5 +1,5 @@
-<div class="download-container">
-	<p class="download-text">
+<div class="interested">
+	<p class="heading">
 		Mari buat ini resmi, daftar dan temukan solusi tepat untuk kebutuhan digitalmu
 	</p>
 	<div class="group">
@@ -10,11 +10,11 @@
 <style lang="postcss" module>
 	@reference "tailwindcss";
 
-	.download-container {
+	.interested {
 		@apply my-24 flex w-full flex-col items-center pt-16;
 	}
 
-	.download-text {
+	.heading {
 		@apply max-w-4xl pb-8 text-center text-3xl font-bold leading-none sm:text-4xl;
 	}
 

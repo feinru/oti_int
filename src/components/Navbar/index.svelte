@@ -1,6 +1,9 @@
 <script lang="ts">
 	const navigation = $state([
-		{ name: 'Get Started', href: '/#about' },
+		{
+			name: 'Transform Your Bussiness',
+			href: 'https://forms.gle/evx2evXN3fGJLNDX8'
+		},
 		{ name: 'Partner with Us', href: '/partner' },
 		{ name: 'Our Plans', href: '/plans' }
 	]);
