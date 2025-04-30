@@ -41,11 +41,8 @@
 
 <div class="pricing">
 	<div class="cont">
-		<h2 class="heading">Perkenalkan Paket Terbaik dari OmahTI</h2>
-		<p class="desc">
-			Kami berfokus pada pasar di mana teknologi, inovasi, dan modal dapat membuka nilai jangka
-			panjang dan menciptakan dampak nyata
-		</p>
+		<h2 class="heading">View Our Partnership Opportunities</h2>
+		<p class="desc">Pilih salah satu paket sesuai dengan preferensi kebutuhanmu!</p>
 	</div>
 	<div class="prices">
 		{#each pricingList as item}
@@ -54,10 +51,6 @@
 					<button class="tag-btn">{item.tag}</button>
 				</div>
 				<div class="content">
-					<div class="top">
-						<span class="price">{item.price}</span>
-						<span class="price-sub">/proyek</span>
-					</div>
 					<ul class="items">
 						{#each item.benefits as benefit}
 							<li class="item">
@@ -79,7 +72,8 @@
 					</ul>
 				</div>
 				<div class="bottom">
-					<a href={item.href} class="btn"> Get Started </a>
+					<a href={item.href} class="btn">Registration</a>
+					<a href={item.href} class="outlined-btn">Download Proposal</a>
 				</div>
 			</div>
 		{/each}
@@ -90,11 +84,11 @@
 	@reference "tailwindcss";
 
 	.pricing {
-		@apply mx-auto max-w-screen-2xl px-4 py-16 pt-8 lg:px-8 lg:py-32 lg:pt-24 2xl:px-16;
+		@apply mx-auto max-w-screen-2xl px-4 py-16 lg:px-8 lg:py-32 2xl:px-16;
 	}
 
 	.cont {
-		@apply mx-auto mb-8 max-w-screen-md text-center lg:mb-12;
+		@apply mx-auto mb-8 text-left lg:mb-12;
 	}
 
 	.prices {
@@ -102,15 +96,15 @@
 	}
 
 	.heading {
-		@apply mb-4 text-4xl font-extrabold tracking-tight;
+		@apply mb-2 text-2xl font-extrabold tracking-tight;
 	}
 
 	.desc {
-		@apply mb-8 text-center text-base text-gray-300 opacity-90;
+		@apply mb-4 text-base text-gray-300 opacity-90;
 	}
 
 	.card {
-		@apply px-17 py-18 md:py-26 relative flex aspect-square w-full items-center justify-center rounded-lg border border-[#efeeec14] bg-[#efeeec0f] transition-colors md:px-20;
+		@apply px-17 relative flex aspect-square w-full items-center justify-center rounded-lg border border-[#efeeec14] bg-[#efeeec0f] py-24 transition-colors md:px-20 md:py-32;
 	}
 
 	.tag {
@@ -118,23 +112,11 @@
 	}
 
 	.tag-btn {
-		@apply relative flex items-center justify-start rounded-sm bg-black px-2 py-1 font-bold uppercase;
+		@apply relative flex items-center justify-start rounded-sm bg-black px-2 py-1 text-xl font-bold uppercase;
 	}
 
 	.content {
 		@apply grid w-full flex-col items-center justify-center gap-x-16 gap-y-2 text-center lg:gap-y-8 xl:gap-y-4 2xl:gap-y-8;
-	}
-
-	.top {
-		@apply my-8 flex flex-row items-baseline justify-center;
-	}
-
-	.price {
-		@apply mb-0 mr-2 mt-0 text-5xl font-medium leading-none;
-	}
-
-	.price-sub {
-		@apply text-gray-400;
 	}
 
 	.items {
@@ -150,10 +132,14 @@
 	}
 
 	.bottom {
-		@apply absolute bottom-10 left-10 right-10;
+		@apply absolute bottom-10 left-10 right-10 flex space-x-2;
 	}
 
 	.btn {
-		@apply relative flex h-12 items-center justify-center rounded bg-[#f0861a] px-6 font-medium text-white transition hover:opacity-80;
+		@apply relative flex h-12 w-1/2 items-center justify-center rounded bg-[#f0861a] px-6 text-center font-medium text-white transition hover:opacity-80;
+	}
+
+	.outlined-btn {
+		@apply relative flex h-12 w-1/2 items-center justify-center rounded border border-[#f0861a] px-6 text-center font-medium text-white transition hover:bg-[#f0861a];
 	}
 </style>

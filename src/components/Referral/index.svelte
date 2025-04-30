@@ -47,7 +47,7 @@
 	}
 
 	.btn {
-		@apply mt-6 block w-fit rounded bg-[#f0861a] px-6 py-3 font-semibold transition hover:opacity-80;
+		@apply mx-auto mt-6 block w-fit rounded bg-[#f0861a] px-6 py-3 font-semibold transition hover:opacity-80 lg:mx-0;
 	}
 
 	.right {

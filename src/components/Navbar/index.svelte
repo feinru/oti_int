@@ -4,8 +4,8 @@
 			name: 'Transform Your Bussiness',
 			href: 'https://forms.gle/evx2evXN3fGJLNDX8'
 		},
-		{ name: 'Partner with Us', href: '/partner' },
-		{ name: 'Our Plans', href: '/plans' }
+		{ name: 'Our Plans', href: '/plans' },
+		{ name: 'Partner with Us', href: '/partner' }
 	]);
 
 	let isScrolling = $state(false),
