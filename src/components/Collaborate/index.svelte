@@ -55,7 +55,8 @@
 				{/each}
 			</div>
 		</div>
-		<a href="/" class="btn mt-12"> Get Started </a>
+
+		<a href="#opportunities" class="btn mt-12">Get Started</a>
 	</div>
 </div>
 <Card />

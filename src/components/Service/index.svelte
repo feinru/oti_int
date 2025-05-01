@@ -74,7 +74,7 @@
 				{/each}
 			</div>
 			<div class="mt-8">
-				<h2 class="mb-4 text-lg font-semibold">Jasa Terpilih</h2>
+				<h2 class="subtitle">Jasa Terpilih</h2>
 				<div class="wrapper mb-4">
 					{#each servicesList as service, i}
 						{#if service.isAdded === true}
@@ -105,8 +105,12 @@
 					IDR {total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
 				</p>
 				<p class="tax">Including taxes</p>
-
-				<a href="/" class="btn"> Payment Process </a>
+				<a
+					href="https://docs.google.com/forms/d/e/1FAIpQLSfyBotkKlYxWTTWNuUYXhrKKGSGdjmv15eg7jLAXoHUmJRB9A/viewform"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn">Payment Process</a
+				>
 			</div>
 		</div>
 	</div>
@@ -157,6 +161,10 @@
 
 	.right_title {
 		@apply mb-4 text-xl font-semibold;
+	}
+
+	.subtitle {
+		@apply mb-4 text-lg font-semibold;
 	}
 
 	.wrapper {

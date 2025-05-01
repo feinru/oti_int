@@ -9,7 +9,12 @@
 				Ajak minimal 5 orang untuk membeli jasa OmahTI dan nikmati potongan harga sebesar 25% untuk
 				layanan pilihanmu!
 			</p>
-			<button class="btn"> Daftar Sekarang </button>
+			<a
+				href="https://docs.google.com/forms/d/e/1FAIpQLScSNDYtD9X7pl0ezqKhgyHco3LP0NspZZ4KHSoS1AMWPI-lAg/viewform"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="btn">Daftar Sekarang</a
+			>
 		</div>
 
 		<div class="right">

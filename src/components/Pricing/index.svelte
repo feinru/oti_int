@@ -3,7 +3,7 @@
 		{
 			tag: 'App Development',
 			price: 'Rp3,5Jt',
-			href: '/',
+			href: 'https://docs.google.com/forms/d/e/1FAIpQLSfyBotkKlYxWTTWNuUYXhrKKGSGdjmv15eg7jLAXoHUmJRB9A/viewform',
 			benefits: [
 				'Desain UI/UX — 2 revisi',
 				'Pengembangan Lintas Platform',
@@ -15,7 +15,7 @@
 		{
 			tag: 'Web Development',
 			price: 'Rp3,5Jt',
-			href: '/',
+			href: 'https://docs.google.com/forms/d/e/1FAIpQLSfyBotkKlYxWTTWNuUYXhrKKGSGdjmv15eg7jLAXoHUmJRB9A/viewform',
 			benefits: [
 				'Layanan Lengkap',
 				'UI Responsif dan Mobile Friendly',
@@ -27,7 +27,7 @@
 		{
 			tag: 'AI Development',
 			price: 'Rp5Jt',
-			href: '/',
+			href: 'https://docs.google.com/forms/d/e/1FAIpQLSfyBotkKlYxWTTWNuUYXhrKKGSGdjmv15eg7jLAXoHUmJRB9A/viewform',
 			benefits: [
 				'Integrasi AI',
 				'Otomatisasi Proses Bisnis',
@@ -79,7 +79,7 @@
 					</ul>
 				</div>
 				<div class="bottom">
-					<a href={item.href} class="btn"> Get Started </a>
+					<a href={item.href} target="_blank" rel="noopener noreferrer" class="btn">Get Started</a>
 				</div>
 			</div>
 		{/each}

@@ -3,7 +3,7 @@
 		{
 			tag: 'App Development',
 			price: 'Rp3,5Jt',
-			href: '/',
+			href: 'https://docs.google.com/forms/d/e/1FAIpQLScSNDYtD9X7pl0ezqKhgyHco3LP0NspZZ4KHSoS1AMWPI-lAg/viewform',
 			benefits: [
 				'Desain UI/UX — 2 revisi',
 				'Pengembangan Lintas Platform',
@@ -15,7 +15,7 @@
 		{
 			tag: 'Web Development',
 			price: 'Rp3,5Jt',
-			href: '/',
+			href: 'https://docs.google.com/forms/d/e/1FAIpQLScSNDYtD9X7pl0ezqKhgyHco3LP0NspZZ4KHSoS1AMWPI-lAg/viewform',
 			benefits: [
 				'Layanan Lengkap',
 				'UI Responsif dan Mobile Friendly',
@@ -27,7 +27,7 @@
 		{
 			tag: 'AI Development',
 			price: 'Rp5Jt',
-			href: '/',
+			href: 'https://docs.google.com/forms/d/e/1FAIpQLScSNDYtD9X7pl0ezqKhgyHco3LP0NspZZ4KHSoS1AMWPI-lAg/viewform',
 			benefits: [
 				'Integrasi AI',
 				'Otomatisasi Proses Bisnis',
@@ -39,7 +39,7 @@
 	]);
 </script>
 
-<div class="pricing">
+<div class="opportunities" id="opportunities">
 	<div class="cont">
 		<h2 class="heading">View Our Partnership Opportunities</h2>
 		<p class="desc">Pilih salah satu paket sesuai dengan preferensi kebutuhanmu!</p>
@@ -72,7 +72,7 @@
 					</ul>
 				</div>
 				<div class="bottom">
-					<a href={item.href} class="btn">Registration</a>
+					<a href={item.href} target="_blank" rel="noopener noreferrer" class="btn">Daftar</a>
 					<a href={item.href} class="outlined-btn">Download Proposal</a>
 				</div>
 			</div>
@@ -83,7 +83,7 @@
 <style lang="postcss" module>
 	@reference "tailwindcss";
 
-	.pricing {
+	.opportunities {
 		@apply mx-auto max-w-screen-2xl px-4 py-16 lg:px-8 lg:py-32 2xl:px-16;
 	}
 
