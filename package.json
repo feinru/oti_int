@@ -40,7 +40,7 @@
 		"vite": "^6.2.5"
 	},
 	"dependencies": {
-		"svelte-french-toast": "^1.2.0",
+		"svelte-french-toast": "^2.0.0-alpha.0",
 		"swiper": "^11.2.6"
 	}
 }
