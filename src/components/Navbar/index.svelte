@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { Menu, X } from 'lucide-svelte';
+	import { cubicIn, cubicOut } from 'svelte/easing';
+	import { scale } from 'svelte/transition';
 	const navigation = $state([
 		{
 			name: 'Transform Your Bussiness',
@@ -10,6 +13,8 @@
 
 	let isScrolling = $state(false),
 		headerEl: null | HTMLElement = null;
+
+	let showMobile = $state(false);
 
 	const handleScroll = () => {
 		const headerHeight = headerEl?.offsetHeight ?? 0;
@@ -39,7 +44,46 @@
 				<a href={item.href} class="link">{item.name}</a>
 			{/each}
 		</div>
+
+		{#if !showMobile}
+			<button onclick={() => (showMobile = !showMobile)} class="btn">
+				<div
+					class="relative"
+					transition:scale={{ duration: 200, easing: cubicOut }}
+					style="transform-origin: center;"
+				>
+					<Menu class="icon" />
+				</div>
+			</button>
+		{/if}
+
+		{#if showMobile}
+			<button onclick={() => (showMobile = !showMobile)} class="btn">
+				<div
+					class="relative"
+					transition:scale={{ duration: 200, easing: cubicOut }}
+					style="transform-origin: center;"
+				>
+					<X class="icon" />
+				</div>
+			</button>
+		{/if}
 	</nav>
+	{#if showMobile}
+		<div
+			class="mobile"
+			in:scale={{ easing: cubicOut, duration: 250 }}
+			out:scale={{ easing: cubicIn, duration: 250 }}
+		>
+			<div class="inside">
+				{#each navigation as item}
+					<a href={item.href} class="mb-link">
+						{item.name}
+					</a>
+				{/each}
+			</div>
+		</div>
+	{/if}
 	<div class="bg" class:scrolling={isScrolling}></div>
 </header>
 
@@ -71,7 +115,7 @@
 	}
 
 	.link {
-		@apply text-sm font-semibold capitalize text-white;
+		@apply text-sm font-semibold capitalize;
 	}
 
 	.bg {
@@ -89,5 +133,25 @@
 
 	.bg.scrolling {
 		@apply scale-100;
+	}
+
+	.btn {
+		@apply absolute right-4 top-4 block rounded-md p-2 lg:hidden;
+	}
+
+	.icon {
+		@apply h-6 w-6 text-gray-700;
+	}
+
+	.mobile {
+		@apply absolute right-4 top-16 z-40 rounded border border-[#efeeec14] bg-[#1a1a1a] shadow-xl lg:hidden;
+	}
+
+	.inside {
+		@apply flex flex-col px-4 py-3;
+	}
+
+	.mb-link {
+		@apply rounded px-4 py-3 text-base font-medium text-gray-100 transition duration-200 hover:bg-white/5;
 	}
 </style>

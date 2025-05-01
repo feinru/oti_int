@@ -1,12 +1,10 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import toast from 'svelte-french-toast';
-	let Toaster: any = $state(null);
+	import toast, { Toaster } from 'svelte-french-toast';
 	let firstName = $state(''),
 		lastName = $state(''),
 		email = $state(''),
 		problem = $state(''),
-		loading = $state(true);
+		loading = $state(false);
 
 	const postData = async (e: Event) => {
 		e.preventDefault();
@@ -40,12 +38,6 @@
 				loading = false;
 			});
 	};
-
-	onMount(async () => {
-		const module = await import('svelte-french-toast');
-		loading = false;
-		Toaster = module.Toaster;
-	});
 </script>
 
 <div class="recommendation">
@@ -120,9 +112,7 @@
 			<button type="submit" disabled={loading} class="btn"> Submit </button>
 		</div>
 	</form>
-	{#if Toaster}
-		<Toaster />
-	{/if}
+	<Toaster />
 </div>
 
 <style lang="postcss" module>
